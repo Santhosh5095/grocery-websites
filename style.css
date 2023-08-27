@@ -1,0 +1,1406 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,600;1,400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    user-select: none;
+}
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+body{
+    background-color: #d6d1d1;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    background: #fff;
+    padding: 1rem;
+    z-index: 1;
+}
+.header .ri-shopping-basket-2-fill{
+    font-size: 1.5rem;
+    color: orange;
+}
+.header .ri-shopping-basket-2-fill span{
+    color: black;
+    font-weight: 700;
+}
+.header .navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    user-select: none;
+}
+.header .navbar a{
+    text-decoration: none;
+    color: black;
+}
+.header .navbar a:hover{
+    color: orange;
+}
+.header .icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+.header .icons i{
+    font-size: 1.5rem;
+    padding: 5px;
+    border-radius: 5px;
+}
+.header .icons i:hover{
+    background: orange;
+}
+.header .icons .ri-menu-line{
+    display: none;
+    cursor: pointer;
+}
+.header .icons .ri-menu-line:hover{
+    color:#fff;
+}
+.ri-search-line{
+    cursor: pointer;
+}
+.header .icons .ri-search-line{
+    background:#eee;
+    cursor: pointer;
+}
+.header .icons .ri-search-line:hover{
+    color: #fff;
+}
+.header .icons .ri-shopping-cart-2-fill{
+    background:#eee;
+    cursor: pointer;
+}
+.header .icons .ri-shopping-cart-2-fill:hover{
+    color: #fff;
+}
+.header .icons .ri-user-3-fill{
+    background:#eee;
+    cursor: pointer;
+}
+.header .icons .ri-user-3-fill:hover{
+    color: #fff;
+}
+.header .search-form{
+    position: absolute;
+    top: 5.5rem;
+    right: -110%;
+}
+.header .search-form.active{
+    right: 2rem;
+    transition: .4s linear;
+}
+.header .search-form input{
+    position: absolute;
+    right: -1.4rem;
+    width: 23rem;
+    padding: .3rem;
+    border-radius: 5px;
+}
+.header .search-form .search{
+    position: absolute;
+    right: -0.8rem;
+    font-size: 1.5rem;
+    top: -0.1rem;
+}
+.header .search-form .search:hover{
+    color: orange;
+}
+.header .shopping-cart-form{
+    position: absolute;
+    top: 5.6rem;
+    right: -110%;
+    background: #fff;
+    height: 22rem;
+    width: 18rem;
+    padding: 1.5rem;
+    user-select: none;
+    max-height: 60rem;
+}
+.header .shopping-cart-form.active{
+    right: 1rem;
+    transition: .6 linear;
+}
+.shopping-cart-form .watermelon{
+    position: relative;
+    display: flex;
+}
+.shopping-cart-form .watermelon img{
+    height: 3rem;
+}
+.shopping-cart-form .watermelon p{
+    position: relative;
+    right: -1.3rem;
+    font-weight: 700;
+}
+.shopping-cart-form .watermelon span{
+    position: relative;
+    right: 5rem;
+    top: 2rem;
+    display: flex;
+    justify-content: center;
+    opacity: .5;
+}
+.ri-delete-bin-fill{
+    cursor: pointer;
+}
+.shopping-cart-form .watermelon i{
+    position: relative;
+    top: 1rem;
+    right: 3rem;
+    font-size: 1.5rem;
+}
+.shopping-cart-form .watermelon i:hover{
+    color: orange;
+}
+.shopping-cart-form .onion{
+    margin-top: 2rem;
+    display: flex;
+    position: relative;
+}
+.shopping-cart-form .onion p{
+    position: relative;
+    right: -1.3rem;
+    font-weight: 700;
+}
+.shopping-cart-form .onion img{
+    height: 3.2rem;
+}
+.shopping-cart-form .onion p{
+    position: relative;
+    right: -1.8rem;
+    font-weight: 700;
+}
+.shopping-cart-form .onion span{
+    position: relative;
+    right: 1.7rem;
+    top: 2rem;
+    display: flex;
+    justify-content: center;
+    opacity: .5;
+}
+.shopping-cart-form .onion i{
+    position: relative;
+    top: 1rem;
+    right: -0.3rem;
+    font-size: 1.5rem;
+}
+.shopping-cart-form .onion i:hover{
+    color: orange;
+}
+.shopping-cart-form .chicken{
+    margin-top: 2rem;
+    display: flex;
+    position: relative;
+}
+.shopping-cart-form .chicken img{
+    height: 2.6rem;
+}
+.shopping-cart-form .chicken p{
+    position: relative;
+    right: -1rem;
+    font-weight: 700;
+}
+.shopping-cart-form .chicken span{
+    position: relative;
+    right: 3.6rem;
+    top: 2rem;
+    display: flex;
+    justify-content: center;
+    opacity: .5;
+}
+.shopping-cart-form .chicken i{
+    position: relative;
+    top: 1rem;
+    right: 1.7rem;
+    font-size: 1.5rem;
+}
+.shopping-cart-form .chicken i:hover{
+    color: orange;
+}
+.shopping-cart-form h3{
+    font-size: 17px;
+    font-weight: 500;
+    position: absolute;
+    top: 16.5rem;
+    right: 4.5rem;
+}
+.shopping-cart-form .btn{
+    position: absolute;
+    top: 19.5rem;
+}
+.shopping-cart-form .btn input{
+    width: 15rem;
+    padding: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.shopping-cart-form .btn input:hover{
+    background: orange;
+    color: #fff;
+}
+.header .icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header .login-form{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 5.5rem;
+    right: -110%;
+    padding: 1rem;
+    background: #fff;
+    height: 16rem;
+    width: 15rem;
+    max-height: 50rem;
+    z-index: 1;
+}
+.header .login-form.active{
+    right: 1rem;
+    transition: .4 linear;
+}
+.header .login-form h2{
+    text-align: center;
+}
+.header .login-form input{
+    background: #eee;
+    border: none;
+    line-height: 2rem;
+    width: 13rem;
+    border-radius: 3px;
+    padding-left: 5px;
+}
+.header .login-form .password{
+    margin-top: .5rem;
+}
+.header .login-form h4{
+    font-size: 10px;
+    margin-top: .5rem;
+}
+.header .login-form h4 a{
+    text-decoration: none;
+    margin-left: .5rem;
+}
+.header .login-form h4 a:hover{
+    color: orange;
+}
+.header .login-form .login-btn{
+    width: 8rem;
+    border: solid 2px black;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2.5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+.header .login-form .login-btn:hover{
+    background: orange;
+    color: #fff;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(img/bg1.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 20rem;
+}
+.home .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home .content h1{
+    margin-top: 8rem;
+    font-size: 30px;
+}
+.home .content span{
+    color: orange;
+}
+.home .content h3{
+    font-weight: 400;
+    opacity: .6;
+}
+.home .content h4{
+    font-weight: 400;
+    opacity: .6;
+}
+.home .content input{
+    margin-top: 2rem;
+    width: 7rem;
+    height: 2rem;
+    border:solid black 1px;
+    color: black;
+    background: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.home .content input:hover{
+    color: #fff;
+    background: orange;
+}
+.content2 h1{
+    text-align: center;
+    margin-top: 1.5rem;
+}
+.content2 span{
+    color: #fff;
+}
+.content2 span{
+    margin-left: 1rem;
+    background-color: orange;
+    padding: .5rem 1rem;
+    display: inline-block;
+    clip-path: polygon(100% 0,93% 50%,100% 99%,0% 100%,7% 50%,0% 0%);
+}
+.content2 .box1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 1rem;
+    gap: 2rem;
+}
+.content2 .box1 .box2{
+    border: none;
+    padding: 10px;
+    background: #eee;
+    border-radius: 8px;
+}
+.content2 .box1 .box2 .organic{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid rgb(162, 156, 156) 3px;
+    border-radius: 8px;
+    width: 25rem;
+    height: 23rem;
+}
+.content2 .box1 .box2 .organic:hover{
+    border: solid black 2px;
+    border-radius: 5px;
+}
+.content2 .box1 .organic img{
+    height: 12rem
+}
+.content2 .box1 .organic h5{
+    font-weight: 300;
+    font-size: 18px;
+}
+.content2 .box1 .box2 .organic .checked{
+    color: orange;
+}
+.content2 .box1 .organic input{
+    margin-top: .5rem;
+    width: 7rem;
+    height: 2rem;
+    border: black solid 2px;
+    cursor: pointer;
+}
+.content2 .box1 .organic input:hover{
+    color: #fff;
+    background: orange;
+}
+.content2 .box1 .box3{
+    border: none;
+    padding: 10px;
+    background: #eee;
+    border-radius: 8px;
+}
+.content2 .box1 .box3 .delivery{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid rgb(162, 156, 156) 3px;
+    border-radius: 8px;
+    width: 25rem;
+    height: 23rem;
+}
+.content2 .box1 .box3 .delivery:hover{
+    border: solid black 2px;
+    border-radius: 5px;
+}
+.content2 .box1 .delivery img{
+    height: 12rem
+}
+.content2 .box1 .delivery h5{
+    font-weight: 300;
+    font-size: 18px;
+}
+.content2 .box1 .box3 .delivery .checked{
+    color: orange;
+}
+.content2 .box1 .delivery input{
+    margin-top: .5rem;
+    width: 7rem;
+    height: 2rem;
+    border: black solid 2px;
+    cursor: pointer;
+}
+.content2 .box1 .delivery input:hover{
+    color: #fff;
+    background: orange;
+}
+.content2 .box1 .box4{
+    border: none;
+    padding: 10px;
+    background: #eee;
+    border-radius: 8px;
+}
+.content2 .box1 .box4 .payment{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid rgb(162, 156, 156) 3px;
+    border-radius: 8px;
+    width: 25rem;
+    height: 23rem;
+}
+.content2 .box1 .box4 .payment:hover{
+    border: solid black 2px;
+    border-radius: 5px;
+}
+.content2 .box1 .payment img{
+    height: 12rem
+}
+.content2 .box1 .payment h5{
+    font-weight: 300;
+    font-size: 18px;
+}
+.content2 .box1 .box4 .payment .checked{
+    color: orange;
+}
+.content2 .box1 .payment input{
+    margin-top: .5rem;
+    width: 7rem;
+    height: 2rem;
+    border: black solid 2px;
+    cursor: pointer;
+}
+.content2 .box1 .payment input:hover{
+    color: #fff;
+    background: orange;
+}
+.content2 .box5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    margin-top: 1rem;
+    gap: .5rem;
+}
+.content2 .box5 .box2{
+    border: none;
+    padding: 10px;
+    background: #eee;
+    border-radius: 8px;
+}
+.content2 .box5 .box2 .organic{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid rgb(162, 156, 156) 3px;
+    border-radius: 8px;
+    width: 21rem;
+    height: 23rem;
+}
+.content2 .box5 .box2 .organic:hover{
+    border: solid black 2px;
+    border-radius: 5px;
+}
+.content2 .box5 .box2 .organic img{
+    height: 12rem
+}
+.content2 .box5 .box2 .organic h5{
+    font-weight: 300;
+    font-size: 18px;
+}
+.content2 .box5 .box2 .organic input{
+    margin-top: .5rem;
+    width: 7rem;
+    height: 2rem;
+    border: black solid 2px;
+    cursor: pointer;
+}
+.content2 .box5 .box2 .organic input:hover{
+    color: #fff;
+    background: orange;
+}
+.content2 .box5 .box3{
+    border: none;
+    padding: 10px;
+    background: #eee;
+    border-radius: 8px;
+}
+.content2 .box5 .box3 .delivery{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid rgb(162, 156, 156) 3px;
+    border-radius: 8px;
+    width: 21rem;
+    height: 23rem;
+}
+.content2 .box5 .box3 .delivery:hover{
+    border: solid black 2px;
+    border-radius: 5px;
+}
+.content2 .box5 .box3 .delivery img{
+    height: 12rem
+}
+.content2 .box5 .box3 .delivery h5{
+    font-weight: 300;
+    font-size: 18px;
+}
+.content2 .box5 .box3 .delivery input{
+    margin-top: .5rem;
+    width: 7rem;
+    height: 2rem;
+    border: black solid 2px;
+    cursor: pointer;
+}
+.content2 .box5 .box3 .delivery input:hover{
+    color: #fff;
+    background: orange;
+}
+.content2 .box5 .box4{
+    border: none;
+    padding: 10px;
+    background: #eee;
+    border-radius: 8px;
+}
+.content2 .box5 .box4 .payment{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid rgb(162, 156, 156) 3px;
+    border-radius: 8px;
+    width: 21rem;
+    height: 23rem;
+}
+.content2 .box5 .box4 .payment:hover{
+    border: solid black 2px;
+    border-radius: 5px;
+}
+.content2 .box5 .box4 .payment img{
+    height: 12rem
+}
+.content2 .box5 .box4 .payment h5{
+    font-weight: 300;
+    font-size: 18px;
+}
+.content2 .box5 .box4 .payment input{
+    margin-top: .5rem;
+    width: 7rem;
+    height: 2rem;
+    border: black solid 2px;
+    cursor: pointer;
+}
+.content2 .box5 .box4 .payment input:hover{
+    color: #fff;
+    background: orange;
+}
+.content3{
+    padding: 4rem;
+    margin-top: -3.5rem;
+}
+.content3 h1{
+    text-align: center;
+}
+.content3 span{
+    margin-left: 1rem;
+    background-color: orange;
+    padding: .5rem 1rem;
+    display: inline-block;
+    clip-path: polygon(100% 0,93% 50%,100% 99%,0% 100%,7% 50%,0% 0%);
+}
+.content3 .blog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 0.2rem;
+    margin-top: 2rem;
+}
+.content3 .blog1{
+    background: #fff;
+    width: 26.5rem;
+    height: 30rem;
+    border-radius: 10px;
+    padding: .4rem;
+}
+.content3 .blog1 img{
+    position: relative;
+    top: -0.5rem;
+    left: -0.4rem;
+    width: 26.5rem;
+    border-radius: 10px;
+}
+.content3 .blog1 .admin{
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0px 1rem 0px;
+    gap: 7rem;
+    cursor: pointer;
+}
+.content3 .blog1 .admin .ri-user-3-fill{
+    font-size: 1.6rem;
+}
+.content3 .blog1 .admin .ri-calendar-fill{
+    font-size: 1.6rem;
+}
+.content3 .blog1 .admin p{
+    font-size: 1.1rem;
+}
+.content3 .blog1 .admin p i{
+    color: orange;
+}
+.content3 .blog .blog1 h1{
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: -11rem;
+}
+.content3 .blog .blog1 h5{
+    font-weight: 400;
+    margin-left: 0.5rem ;
+}
+.content3 .blog .blog1 input{
+    margin-top: .5rem;
+    margin-left: .2rem;
+    width: 7rem;
+    height: 1.5rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.content3 .blog .blog1 input:hover{
+    color: #fff;
+    background: orange;
+}
+.content3 .blog .blog1 .pic4{
+    height: 16.5rem;
+}
+.content3 .blog .blog1 .pic3{
+    height: 16.5rem;
+}
+.content4{
+    padding: -8rem;
+    height: 25rem;
+}
+.content4 .details .block1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content4 .details .block2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content4 .mem{
+    background: #fff;
+    height: 25rem;
+}
+.content4 .details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    height: 20rem;
+}
+.content4 .details .block1 .groco{
+    width: 17rem;
+    height: 20rem;
+    margin-left: 5rem;
+    padding-top:2rem ;
+}
+.content4 .details .block1 .groco span{
+    font-weight: 700;
+    font-size: 20px;
+}
+.content4 .details .block1 .groco i{
+    font-size: 25px;
+}
+.content4 .details .block1 .groco .ri-shopping-basket-2-fill{
+    color: orange;
+}
+.content4 .details .block1 .groco h4{
+    font-weight: 400;
+    margin-top: 1rem;
+    font-size: 18px;
+}
+.content4 .details .block1 .groco .icons{
+    margin-top: 1rem;
+    display: flex;
+    gap: .5rem;
+}
+.content4 .details .block1 .groco .ri-facebook-fill{
+    background: #eee;
+    padding: .5rem;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.content4 .details .block1 .groco .ri-twitter-fill{
+    background: #eee;
+    padding: .5rem;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.content4 .details .block1 .groco .ri-instagram-line{
+    background: #eee;
+    padding: .5rem;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.content4 .details .block1 .groco .ri-linkedin-box-fill{
+    background: #eee;
+    padding: .5rem;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.content4 .details .block1 .contact{
+    display: flex;
+    flex-direction: column;
+    width: 17rem;
+    height: 20rem;
+    margin-left: 5rem;
+    padding-top:2rem ;
+}
+.content4 .details .block1 .contact .contact-icons{
+    margin-top: 1rem;
+    line-height: 2.3rem;
+}
+.content4 .details .block1 .contact .contact-icons i{
+    color: orange;
+    cursor: pointer;
+}
+.content4 .details .block1 .contact .contact-icons span{
+    margin-left: .5rem;
+}
+.content4 .details .block1 .contact .contact-icons span:hover{
+    margin-left: 1.5rem;
+    cursor: pointer;
+}
+.content4 .details .quick-links{
+    display: flex;
+    flex-direction: column;
+    width: 17rem;
+    height: 20rem;
+    margin-left: 5rem;
+    padding-top:2rem ;
+}
+.content4 .details .quick-links .links{
+    margin-top: 1rem;
+    line-height: 2.3rem;
+}
+.content4 .details .quick-links .links i{
+    color: orange;
+    font-size: 15px;
+    cursor: pointer;
+}
+.content4 .details .block2 .quick-links .links a{
+    text-decoration: none;
+    color: black;
+}
+.content4 .details .block2 .quick-links .links a:hover{
+    margin-left: 1.5rem;
+    cursor: pointer;
+}
+.content4 .details .quick-links .links .ri-arrow-right-line{
+    font-size: 25px;
+    font-weight: 600;
+}
+.content4 .details .quick-links .links a{
+    margin-left: .5rem;
+}
+.content4 .details .newsletter{
+    display: flex;
+    flex-direction: column;
+    width: 17rem;
+    height: 20rem;
+    margin-left: 5rem;
+    padding-top:2rem ;
+}
+.content4 .details .newsletter .form{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
+}
+.content4 .details .newsletter .form .email{
+    width: 16.8rem;
+    background: #eee;
+    height: 2rem;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: .9rem;
+}
+.content4 .details .newsletter .form .btn{
+    width: 7rem;
+    height: 1.9rem;
+    border: solid 2px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.content4 .details .newsletter .form .btn:hover{
+    background: orange;
+    color: #fff;
+}
+.content4 .details .newsletter .images{
+    margin-top: .5rem;
+}
+.content4 .details .newsletter .images .image1{
+    width: 3rem;
+}
+.content4 .details .newsletter .images .image2{
+    width: 3rem;
+}
+.content4 .details .newsletter .images .image3{
+    width: 3rem;
+}
+.content4 .details .newsletter .images .image4{
+    width: 3rem;
+}
+.content4 .mem .the-end{
+    text-align: center;
+    margin-top: 2rem;
+}
+.content4 .mem .the-end span{
+    color: orange;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:991px){
+    html{
+        font-size: 70%;
+    }
+    .header .navbar{
+        position: absolute;
+        top: 5.8rem;
+        right: -110%;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        padding: 5rem;
+        z-index: 1;
+    }
+    .header .navbar.active{
+        right: 20%;
+        transition: .4 linear;
+    }
+    .header .icons .ri-menu-line{
+        display: inline-block;
+        background: #eee;
+    }
+    .header .shopping-cart-form{
+        height: 23rem;
+        z-index: 1;
+    }
+    .header .login-form h4{
+        font-size: 8px;
+    }
+    .header .search-form .search{
+        top: 0.2rem;
+    }
+    .home .content{
+        width: 90%;
+    }
+    .home .content h1{
+        margin-top: 8rem;
+        font-size: 20px;
+    }
+    .content2 .box1{
+        display: flex;
+    }
+    .content2 .box1 .organic h5{
+        font-weight: 500;
+        font-size: 12.5px;
+    }
+    .content2 .box1 .delivery h5{
+        font-weight: 500;
+        font-size: 12.5px;
+    }
+    .content2 .box1 .payment h5{
+        font-weight: 500;
+        font-size: 12.5px;
+    }
+    .content2 .box1 .box2 .organic .cart{
+        width: 10rem;
+    }
+    .content2 .box1 .box3 .delivery .cart{
+        width: 10rem;
+    }
+    .content2 .box1 .box4 .payment .cart{
+        width: 10rem;
+    }
+    .content2 .box5{
+        display: flex;
+    }
+    .content2 .box5 .box2{
+        width: 21.2rem;
+    }
+    .content2 .box5 .box2 .organic{
+        width: 19.2rem;
+    }
+    .content2 .box5 .box3{
+        width: 21.2rem;
+    }
+    .content2 .box5 .box3 .delivery{
+        width: 19.2rem;
+    }
+    .content2 .box5 .box4{
+        width: 21.2rem;
+    }
+    .content2 .box5 .box4 .payment{
+        width: 19.2rem;
+    }
+    .content2 .box5 .box2 .organic h5{
+        font-weight: 600;
+        font-size: 12.5px;
+    }
+    .content2 .box5 .box3 .delivery h5{
+        font-weight: 600;
+        font-size: 12.5px;
+    }
+    .content2 .box5 .box4 .payment h5{
+        font-weight: 600;
+        font-size: 12.5px;
+    }
+    .content3 .blog{
+        display: flex;
+    }
+    .content3 .blog .blog1{
+        height: 33rem;
+    }
+    .content3 .blog .blog1 h1{
+        font-size: 20px;
+        font-weight: 600;
+        margin-left: -5rem;
+    }
+    .content3 .blog .blog1 input{
+        height: 2rem;
+    }
+    .content3 .blog1 img{
+        position: relative;
+        left: -0.4rem;
+    }
+    .content4{
+        height: 30rem;
+    }
+    .content4 .details{
+        display: flex;
+        height: 30rem;
+    }
+    .content4 .details .block1{
+        gap: -1rem;
+    }
+    .content4 .details .block1 .groco{
+        height: 27rem;
+    }
+    .content4 .details .block1 .contact{
+        height: 27rem;
+    }
+    .content4 .details .block2 .quick-links{
+        height: 27rem;
+    }
+    .content4 .details .block2 .newsletter{
+        height: 27rem;
+        margin-right: 2rem;
+    }
+    .content4 .mem{
+        height: 36rem;
+    }
+    .content4 .mem .the-end{
+        margin-top: .5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        z-index: 1;
+    }
+    .header .search-form .search{
+        top: 0.7rem;
+    }
+    .header .shopping-cart-form{
+        height: 25rem;
+    }
+    .header .shopping-cart-form h3{
+        font-size: 17px;
+        font-weight: 500;
+        position: absolute;
+        top: 16.5rem;
+        right: 1.5rem;
+    }
+    .header .shopping-cart-form h3{
+        font-size: 15px;
+    }
+    .header .login-form input{
+        font-size: 10px;
+    }
+    .header .login-form h4{
+        font-size: 5.5px;
+    }
+    .login-form .login-btn{
+        font-size: 10px;
+    }
+    .home .content h1{
+        margin-top: 8rem;
+        font-size: 10px;
+    }
+    .home .content input{
+        width: 10rem;
+        height: 2.9rem;
+    }
+    .content2 .box1{
+        display: flex;
+        flex-direction: column;
+    }
+    .content2 .box1 .box2{
+        width: 45rem
+    }
+    .content2 .box1 .box2 .organic{
+        width: 42rem;
+    }
+    .content2 .box1 .box3 .delivery{
+        width: 42rem;
+    }
+    .content2 .box1 .box4 .payment{
+        width: 42rem;
+    }
+    .content2 .box5{
+        display: flex;
+        flex-direction: column;
+    }
+    .content2 .box5 .box2{
+        width: 45rem;
+    }
+    .content2 .box5 .box2 .organic{
+        width: 42rem;
+    }
+    .content2 .box5 .box3{
+        width: 45rem;
+    }
+    .content2 .box5 .box3 .delivery{
+        width: 42rem;
+    }
+    .content2 .box5 .box4{
+        width: 45rem;
+    }
+    .content2 .box5 .box4 .payment{
+        width: 42rem;
+    }
+    .content2 .box1 .organic h5{
+        font-weight: 400;
+        font-size: 9px;
+    }
+    .content2 .box1 .delivery h5{
+        font-weight: 400;
+        font-size: 9px;
+    }
+    .content2 .box1 .payment h5{
+        font-weight: 400;
+        font-size: 9px;
+    }
+    .content2 .box1 .box2 .organic{
+        height: 28rem;
+    }
+    .content2 .box1 .box2 .organic input{
+        margin-top: 1.5rem;
+        height: 3rem;
+        width: 12rem;
+    }
+    .content2 .box1 .box3 .delivery{
+        height: 28rem;
+    }
+    .content2 .box1 .box3 .delivery input{
+        margin-top: 1.5rem;
+        height: 3rem;
+        width: 12rem;
+    }
+    .content2 .box1 .box4 .payment{
+        height: 28rem;
+    }
+    .content2 .box1 .box4 .payment input{
+        margin-top: 1.5rem;
+        height: 3rem;
+        width: 12rem;
+    }
+    .content2 .box1 .box2 .organic .cart{
+        width: 13rem;
+    }
+    .content2 .box1 .box3 .delivery .cart{
+        width: 13rem;
+    }
+    .content2 .box1 .box4 .payment .cart{
+        width: 13rem;
+    }
+    .content3 .blog{
+        display: flex;
+        flex-direction: column;
+    }
+    .content2 .box5 .organic h5{
+        font-weight: 400;
+        font-size: 9px;
+    }
+    .content2 .box5 .delivery h5{
+        font-weight: 400;
+        font-size: 9px;
+    }
+    .content2 .box5 .payment h5{
+        font-weight: 400;
+        font-size: 9px;
+    }
+    .content2 .box5 .box2 .organic{
+        height: 28rem;
+    }
+    .content2 .box5 .box2 .organic input{
+        margin-top: 1.5rem;
+        height: 3rem;
+        width: 12rem;
+    }
+    .content2 .box5 .box3 .delivery{
+        height: 28rem;
+    }
+    .content2 .box5 .box3 .delivery input{
+        margin-top: 1.5rem;
+        height: 3rem;
+        width: 12rem;
+    }
+    .content2 .box5 .box4 .payment{
+        height: 28rem;
+    }
+    .content2 .box5 .box4 .payment input{
+        margin-top: 1.5rem;
+        height: 3rem;
+        width: 12rem;
+    }
+    .content3 .blog .blog1{
+        height: 52rem;
+        width: 45rem;
+    }
+    .content3 .blog .blog1 img{
+        width: 45rem;
+    }
+    .content3 .blog .blog1 h1{
+        font-size: 14px;
+        font-weight: 600;
+        margin-left: -5rem;
+    }
+    .content3 .blog .blog1 h5{
+        font-size: 14px;
+        margin-top: .5rem;
+    }
+    .content3 .blog .blog1 input{
+        margin-top: 1.5rem;
+        height: 3.9rem;
+        width: 9.6rem;
+    }
+    .content3 .blog1 img{
+        position: relative;
+        left: -0.4rem;
+    }
+    .content3 .blog .blog1 .pic4{
+        height: 28rem;
+    }
+    .content3 .blog .blog1 .pic3{
+        height: 28rem;
+    }
+    .content4 .details{
+        display: flex;
+        flex-direction: column;
+        height: 120rem;
+        gap: 1rem;
+    }
+    .content4 .details .block1{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .content4 .details .block1 .groco{
+        height: 25rem;
+        width: 32rem;
+    }
+    .content4 .details .block1 .groco h4{
+        font-size: 15px;
+    }
+    .content4 .details .block1 .contact{
+        height: 25rem;
+        width: 32rem;
+    }
+    .content4 .details .block1 .contact h1{
+        font-size: 20px;
+    }
+    .content4 .details .block1 .contact .contact-icons {
+        font-size: 17px;
+        line-height: 4rem;
+        margin-left: 1rem;
+    }
+    .content4 .details .block1 .contact .contact-icons .ri-phone-fill{
+        font-size: 16px;
+    }
+    .content4 .details .block1 .contact .contact-icons .ri-mail-fil{
+        font-size: 17px;
+    }
+    .content4 .details .block2{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .content4 .details .block2 .quick-links{
+        height: 25rem;
+        width: 32rem;
+    }
+    .content4 .details .block2 .quick-links .links .ri-arrow-right-line{
+        font-size: 17px;
+    }
+    .content4 .details .block2 .quick-links h1{
+        font-size: 20px;
+    }
+    .content4 .details .block2 .quick-links span{
+        font-size: 16px;
+    }
+    .content4 .details .block2 .newsletter{
+        height: 25rem;
+        margin-left: 7rem;
+        width: 32rem;
+    }
+    .content4 .details .block2 .newsletter h1{
+        font-size: 20px;
+    }
+    .content4 .details .block2 .newsletter .form h4{
+        font-size: 13px;
+    }
+    .content4 .details .block2 .newsletter .form .email{
+        width: 31.6rem;
+        height: 4rem;
+    }
+    .content4 .details .block2 .newsletter .form .btn{
+        width: 10rem;
+        height: 3rem;
+    }
+    .content4 .mem{
+        height: 119rem;
+    }
+    .content4 .mem .the-end{
+        margin-top: -9rem;
+    }
+}
